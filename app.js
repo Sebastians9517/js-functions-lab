@@ -117,7 +117,18 @@ let longestStringInArray = function(string) {
   }
   return long;
 }
-console.log(`Exercise 8 solution is ${longestStringInArray(['on', 'off', 'fourteen', 'I31222'])} and the word is ${longestWord}.`);
+console.log(`Exercise 8 solution is ${longestStringInArray(['on', 'off', 'four', 'JavaScript', 'potato'])} and the word is ${longestWord}.`);
 
 
 // 9. Define a function, as a function declaration, `stringsLongerThan` that takes an array of strings and a number as arguments; and returns an array of the strings that are longer than the number passed in. For example, `stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3);` would return `["hello", "morning"]`.
+
+function stringLongerThan(words, number){
+  let longerThan = [];
+  for(let d = 0; d < words.length; d++){
+    if(words[d].length > number){
+      longerThan.push(words[d]);
+    }
+  }
+  return longerThan;
+}
+console.log(`Exercise 9 solution is ${stringLongerThan(['on', 'off', 'four', 'JavaScript', 'potato'], 4)}.`);
