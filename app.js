@@ -45,8 +45,17 @@ function isCharAVowel(letter) {
 console.log(isCharAVowel('o'));
 
 // 4. Define a function, as a function expression, `sumArray` that takes an array of numbers and returns the sum of those numbers. For example, `sumArray([2, 4, 5]);` would return `11`.
+let arr = [2,4,5];
 
-
+let epsilon = function sumArray(arr ) {
+  let sum = 0;
+  for(let i = 0; i < arr.length; i++){
+  sum += sum + arr[i];
+  }
+  return(sum);
+};
+console.log(arr);
+console.log(sum);
 
 // 5. Define a function, as a function declaration, `multiplyArray` that takes an array of numbers and returns the product of those numbers. For example, `multiplyArray([2, 4, 5]);` would return `40`.
 
