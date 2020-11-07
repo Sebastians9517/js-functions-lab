@@ -45,20 +45,36 @@ function isCharAVowel(letter) {
 console.log(isCharAVowel('o'));
 
 // 4. Define a function, as a function expression, `sumArray` that takes an array of numbers and returns the sum of those numbers. For example, `sumArray([2, 4, 5]);` would return `11`.
-let arr = [2,4,5];
 
-let epsilon = function sumArray(arr ) {
+let sumArray = function(arr) {
   let sum = 0;
   for(let i = 0; i < arr.length; i++){
-  sum += sum + arr[i];
+  sum = sum + arr[i];
   }
   return(sum);
 };
-console.log(arr);
-console.log(sum);
+
+console.log(sumArray([2, 4, 5]));
 
 // 5. Define a function, as a function declaration, `multiplyArray` that takes an array of numbers and returns the product of those numbers. For example, `multiplyArray([2, 4, 5]);` would return `40`.
 
+function multiplyArray(arr) {
+  let product = 0;
+  for (let q = 0; q < arr.length; q++) { //This loop is to check that all the elements of the array are not equal to 0. Example: [0,0,0]
+    product += arr[q];                   //If at least one of the elements is not equal to 0, then the product will not be equal to 0
+  }
+  if (product === 0){
+  return product;
+  }
+  else {                                //Since the elements of the given array are not all equal to 0, then the product is not equal to 0
+    let product = 1;
+  for (let e = 0; e < arr.length; e++){
+    product *= (arr[e]);
+  }
+  return(product);
+}
+}
+console.log(multiplyArray([2,4,5]));
 
 
 // 6. Define a function, as a function expression, `numArgs` that returns the number of arguments passed to the function when called.
