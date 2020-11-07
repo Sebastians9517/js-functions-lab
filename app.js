@@ -66,7 +66,7 @@ function multiplyArray(arr) {
   if (product === 0){
   return product;
   }
-  else {                                //Since the elements of the given array are not all equal to 0, then the product is not equal to 0
+  else {                                //Since the elements of the given array are not all equal to 0, then the product is not equal to 0 and we can proceed with our multiplication
     let product = 1;
   for (let e = 0; e < arr.length; e++){
     product *= (arr[e]);
@@ -79,7 +79,12 @@ console.log(multiplyArray([2,4,5]));
 
 // 6. Define a function, as a function expression, `numArgs` that returns the number of arguments passed to the function when called.
 
-
+let numArgs = function(...args){
+  let counter = 0;
+  counter = args.length;
+  return counter;
+}
+console.log(numArgs(1,2,3,'hi'));
 
 // 7. Define a function, as a function declaration, `reverseString` that takes a string, reverses the characters and returns it. For example, `reverseString('rockstar');` would return the string "ratskcor".
 
